@@ -1,0 +1,804 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "GothaProLig", sans-serif
+	overflow-x: hidden
+	color: #363636
+
+.hidden
+	display: none
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+.clearfix:after
+	content: ""
+	display: table
+	clear: both
+.container
+	margin: 0 auto
+	width: 940px
+	padding: 0
+.main--button
+	display: inline-block
+	font-size: 18px
+	line-height: 55px
+	width: 260px
+	height: 55px
+	color: #ffffff
+	text-align: center
+	background: #f15a24
+	text-decoration: none
+	box-shadow: 0px 0px 39px -4px rgba( 241, 90, 36, 1)
+	border-radius: 50px
+	outline: none
+	transition: all 0.2s ease-in-out
+	&:hover
+		background: #c24112
+		box-shadow: none
+		color: #ffffff
+		text-decoration: none
+	&:active
+		background: #f15a24
+		box-shadow: none
+	&:focus
+		color: #ffffff
+		background: #f15a24
+		text-decoration: none
+		outline: none
+
+header
+	margin: 0 auto
+	.header__logo
+		float: left
+		margin-top: 25px
+	.navigation
+		float: left
+		ul
+			margin-left: 120px
+			margin-top: 31px
+			padding: 0
+			font-size: 0
+			li
+				display: inline-block
+				text-decoration: none
+				margin-right: 20px
+				&:last-child
+					margin-right: 0
+				a
+					font-size: 12px
+					line-height: 12px
+					color: #363636
+					text-decoration: none
+					padding-top: 7px
+					padding-bottom: 7px
+					&:hover
+						border-bottom: 2px solid #f15a24
+						color: #f15a24
+				&.active 
+					a
+						color: #f15a24 
+						border-bottom: 2px solid #f15a24					
+	.header__language
+		float: right
+		padding-top: 33px
+		font-size: 10px
+		line-height: 10px
+		a
+			color: #363636
+		.active
+			color: #f15a24 
+
+.slider-wrap
+	margin-bottom: 60px
+	.slider
+		position: relative
+		padding-bottom: 80px
+		.slider__text
+			width: 55%
+			margin-bottom: 75px
+			h1
+				font-size: 48px
+				line-height: 1.2em
+				text-transform: uppercase
+				font-family: "Molot", sans-serif
+			p
+				font-size: 18px
+				line-height: 23px
+		.slider__img
+			position: absolute
+			right: 0
+			bottom: 0
+			width: 45%
+			height: auto
+		.slide--button
+			margin-left: 30px
+
+
+	.slick-dots
+	    position: absolute
+	    bottom: 20px
+	    left: 50%
+	    transform: translateX(-50%)
+	    margin: 0
+	    padding: 0
+	    list-style-type: none
+	    li
+	        float: left
+	        display: block
+	        margin-right: 15px
+	        &:last-of-type
+	            margin-right: 0
+	        button
+	            font-size: 0
+	            border: none
+	            outline: none
+	            padding: 0
+	            width: 10px
+	            height: 10px
+	            border-radius: 50%
+	            background-color: #959595
+	    .slick-active
+	        button
+	            background-color: #363636
+
+.about--company
+	margin-bottom: 60px
+	.inline-container
+		margin: 0 auto
+		width: 610px
+		text-align: center
+		p
+			font-size: 18px
+			line-height: 23px
+.product
+	font-size: 0
+	h2
+		font-size: 36px
+		line-height: 36px
+		text-align: center
+		text-transform: uppercase
+		font-family: "Molot", sans-serif
+	.product__button
+		text-align: justify
+		padding: 0 20px
+		margin-bottom: 40px
+		&:after
+			content: ""
+			display: inline-block
+			width: 100%
+			height: 0
+		a
+			display: inline-block
+			font-size: 12px
+			line-height: 31px
+			height: 33px
+			width: 200px
+			border: 1px solid #f15a24
+			text-align: center
+			text-decoration: none
+			background: #ffffff
+			color: #f15a24
+			border-radius: 50px
+			&:hover
+				background: #f15a24
+				color: #ffffff
+		.active--button
+			background: #f15a24
+			color: #ffffff
+	.outline-container
+		margin: 0 auto
+		width: 1366px
+		font-size: 0
+		text-align: center
+		img
+			display: inline-block
+			width: calc(100%/3)
+			margin-bottom: 50px
+.news
+	font-size: 0
+	padding-top: 120px
+	padding-bottom: 120px
+	.news__block
+		width: 32.5%
+		display: inline-block
+		vertical-align: top
+		margin-right: 11px
+		&:last-child
+			margin-right: 0
+		img
+			margin-bottom: 20px
+			box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
+		span
+			display: block
+			font-size: 14px
+			line-height: 14px
+			margin-bottom: 20px
+			font-family: "GothaProBol", sans-serif
+
+		.news__block__head
+			font-size: 24px
+			line-height: 30px
+			font-weight: bold
+			margin-bottom: 20px
+			color: #363636
+			text-decoration: none
+			display: inline-block
+			font-family: "GothaProBol", sans-serif
+		i
+			display: block
+			font-size: 14px
+			line-height: 14px
+			margin-bottom: 20px
+			font-style: normal
+		p
+			display: inline-block
+			font-size: 14px
+			line-height: 18px
+			margin: 0
+			margin-bottom: 20px
+			height: 93px
+			overflow: hidden
+			position: relative
+footer
+	background: #e4e4e4
+	padding-top: 25px
+	padding-bottom: 25px
+	.footer__block, 
+	.footer__block-2,
+	.footer__block-3
+		width: 32.5%
+		display: inline-block
+		vertical-align: bottom
+		margin-right: 6px
+		&:last-of-type
+			margin-right: 0
+	.footer__block-2
+		width: 18.5%
+	.footer__logo
+		.footer__img
+			margin-bottom: 105px
+		p
+			margin: 0
+			font-size: 14px
+			line-height: 1.7em
+	.footer__navigation
+		h3
+			margin: 0
+			margin-bottom: 5px
+			padding: 0
+			font-size: 18px
+			line-height: 18px
+			font-family: GothaProBol,sans-serif
+		ul
+			margin: 0
+			padding: 0
+			li
+				list-style-type: none
+
+				a
+					font-size: 14px
+					line-height: 1.7em
+					color: #4b4b4b
+	.footer__block-3
+		width: 46.5%
+	.footer__mail
+		h3
+			margin: 0
+			display: inline-block	
+			margin-bottom: 5px
+			padding: 0
+			font-size: 18px
+			line-height: 18px
+			font-weight: bold
+			color: #1b1b1b
+		p
+			float: right	
+			margin: 0
+			display: inline-block
+			font-size: 14px
+			line-height: 26px
+			a
+				padding-left: 5px
+				display: inline-block
+				color: #4b4b4b
+				text-decoration: none
+				font-weight: 700
+				font-size: 14px
+				&:hover
+					transform: scale(1.1)
+		
+//Дистрибуция
+.distributor__head
+	background: url('../img/distributor-logo.png') no-repeat
+	background-size: contain
+	background-position: 50% 50%
+	width: 100%
+	height: 228px	
+	text-align: center
+	h1
+		font-size: 48px
+		line-height: 48px
+		text-transform: uppercase
+		margin: 0
+		padding-top: 35px
+		padding-left: 70px
+		font-family: "Molot", sans-serif
+.distributor__contacts
+	padding-top: 90px
+	.block--justify
+		font-size: 0
+		.contact--block
+			display: inline-block
+			width: calc(100%/3)
+			margin-bottom: 90px			
+			&:last-child
+				text-align: right
+			&:nth-child(2n)
+				text-align: center
+			&:nth-child(3n)
+				text-align: right
+			.block__center
+				display: inline-block
+				text-align: left
+			.block__right
+				text-align: left
+				display: inline-block
+			h2
+				font-size: 24px
+				line-height: 24px
+				margin: 0
+				margin-bottom: 25px
+				font-family: "GothaProBol", sans-serif
+
+			p
+				font-size: 18px
+				line-height: 18px
+				margin-bottom: 25px
+			a
+				font-size: 18px
+				line-height: 18px
+				color: #1205c1
+				text-decoration: underline
+//Контакты
+.contacts__head
+	background: url('../img/contacts-logo.png') no-repeat
+	background-size: cover
+	width: 100%
+	height: 188px	
+	text-align: center
+	margin: 0 auto
+	h1
+		font-size: 48px
+		line-height: 48px
+		text-transform: uppercase
+		margin: 0
+		padding-top: 35px
+		padding-left: 10px
+		font-family: "Molot", sans-serif
+.contacts__direct
+	padding-top: 100px
+	padding-bottom: 80px
+	.contact_block
+		float: left
+		display: inline-block
+		margin-right: 70px
+		&:last-child
+			margin-right: 0
+			width: 225px
+		h2
+			font-size: 24px
+			line-height: 29px
+			margin-bottom: 35px
+			font-family: "GothaProBol", sans-serif
+			span
+				font-size: 18px
+				line-height: 18px			
+		.header--margin
+			margin-bottom: 25px
+		p
+			font-size: 18px
+			line-height: 20px
+			margin: 0
+			font-weight: normal
+			margin-bottom: 25px
+		a
+			font-size: 18px
+			line-height: 18px
+			color: #363636
+			text-decoration: none
+		.contacts__form__header
+			text-align: center
+		.contacts__form__text
+			font-size: 14px
+			line-height: 14px
+			text-align: center
+		form
+			text-align: center
+			input[type="text"]
+				width: 100%
+				font-size: 12px
+				line-height: 12px
+				padding: 10px
+				border: none
+				outline: none
+				border-bottom: 1px solid #bfbfbf
+				margin-bottom: 30px
+				font-style: italic
+			::-webkit-input-placeholder
+				color: #adadad
+				font-style: italic
+			::-moz-placeholder
+				color: #adadad 
+				font-style: italic 
+			:-moz-placeholder  
+				color: #adadad 
+				font-style: italic       
+			:-ms-input-placeholder
+				color: #adadad
+				font-style: italic
+			input[type="submit"]
+				@extend .main--button
+				outline: none
+				border: none
+				width: 190px
+.contacts__partners
+	text-align: center
+	padding-bottom: 100px
+	h2
+		font-size: 36px
+		line-height: 36px
+		margin: 0
+		text-transform: uppercase
+		font-family: "Molot", sans-serif
+
+.maps
+	padding-bottom: 100px
+//Продукты
+.logo-background-products
+	display: inline-block
+	img
+		position: absolute
+		left: 0
+		top: 0
+.products
+	text-align: center
+	padding-bottom: 80px
+	h1
+		font-size: 48px
+		line-height: 48px
+		margin: 0
+		padding-top: 30px
+		text-transform: uppercase
+		font-family: "Molot", sans-serif
+	.products__text
+		display: inline-block
+		width: 615px
+		font-size: 18px
+		line-height: 23px
+		margin-bottom: 50px
+	.products__button
+		text-align: justify
+		padding: 0 20px
+		margin-bottom: 40px
+		&:after
+			content: ""
+			display: inline-block
+			width: 100%
+			height: 0
+		a
+			display: inline-block
+			font-size: 12px
+			line-height: 31px
+			height: 33px
+			width: 200px
+			border: 1px solid #f15a24
+			text-align: center
+			text-decoration: none
+			background: #ffffff
+			color: #f15a24
+			border-radius: 50px
+			&:hover
+				background: #f15a24
+				color: #ffffff
+		.active--button
+			background: #f15a24
+			color: #ffffff
+	.filter_block
+		display: none
+	.filter--show
+		display: block
+	.products_blocks
+		font-size: 0
+		text-align: justify
+		margin-bottom: 50px
+		&:after
+			content: ''
+			display: inline-block
+			width: 100%
+		.side-block
+			display: inline-block
+			vertical-align: top
+			width: 32%
+			margin-right: 2%
+			text-align: center
+			padding: 40px 0
+			margin-bottom: 25px
+			height: 560px
+			cursor: pointer
+			box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
+			border-radius: 5px
+			border: 1px solid transparent
+			&:hover
+				box-shadow: none
+				border: 1px solid #cccccc
+			&:nth-child(3n)
+				margin-right: 0
+			img
+				margin-bottom: 30px
+			h2
+				font-size: 24px
+				line-height: 24px
+				margin: 0
+				margin-bottom: 35px
+				font-family: "GothaProBol", sans-serif
+			.block__text
+				font-size: 18px
+				line-height: 18px
+				margin: 0
+				margin-bottom: 20px
+		.side-block-3
+			&:hover
+				cursor: default
+
+		.products__block
+			display: inline-block
+			vertical-align: top
+			width: 32%
+			margin-right: 2%
+			text-align: center
+			margin-bottom: 25px
+			height: 560px
+			cursor: pointer
+			box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
+			border-radius: 5px
+			border: 1px solid transparent
+			&:hover
+				box-shadow: none
+				border: 1px solid #cccccc
+			&:nth-child(3n)
+				margin-right: 0
+			img
+				margin-bottom: 15px
+			h2
+				font-size: 24px
+				line-height: 24px
+				margin: 0
+				margin-bottom: 35px
+				font-family: "GothaProBol", sans-serif
+			.block__text
+				font-size: 18px
+				line-height: 22px
+				margin: 0
+				margin-bottom: 20px
+				padding: 0 10px
+				word-wrap: break-word
+	.products_download--button
+		a
+			@extend .main--button
+
+.products
+	.fourth-filter
+		.products_download--button
+			padding-bottom: 150px
+			a
+				@extend .main--button
+				
+.shadow
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, .55)
+.active-shadow
+	display: block
+	z-index: 1
+.product--pop
+	display: none
+	padding: 60px 50px 60px 60px
+	background: #ffffff
+	width: 800px
+	position: fixed
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	-webkit-transform: translateX(-50%)
+	border-radius: 5px
+	margin-top: 5%
+	z-index: 2
+	.product--pop__close
+		position: absolute
+		top: 10px
+		right: 10px
+		width: 24px
+		height: 24px
+		cursor: pointer
+		background: url('../img/icon-close.png') no-repeat
+	.product--pop__main	
+		.products--container
+			height: 352px
+			overflow-y: auto
+			.product--block
+				.column--img
+					float: left
+					width: 55%
+					img
+						margin-top: 30px
+				.column--description
+					float: left
+					width: 45%
+					h2
+						font-size: 30px
+						line-height: 30px
+						text-transform: uppercase
+						margin: 0
+						margin-bottom: 40px
+						font-family: "Molot", sans-serif
+					p
+						font-size: 16px
+						line-height: 16px
+						padding: 0
+						margin: 0
+						margin-bottom: 20px
+						&:last-of-type
+							margin-bottom: 80px
+					b
+						font-family: "GothaProBol", sans-serif
+			.side--block
+				display: none
+				.column--img
+					float: left
+					width: 55%
+					img
+						margin-top: 30px
+				.column--description
+					float: left
+					width: 45%					
+					table
+						width: 100%
+						margin-top: 30px
+						text-align: center
+						caption
+							font-size: 30px
+							line-height: 30px
+							text-transform: uppercase
+							margin: 0
+							margin-bottom: 40px
+							font-family: "Molot", sans-serif
+						tr
+							width: 100%
+							th
+								white-space: nowrap
+								font-family: "GothaProBol", sans-serif
+								text-align: center
+		.popup-link
+			width: 100%
+			text-align: center
+			a
+				margin-top: 50px
+				@extend .main--button
+//О фирме
+.about
+	text-align: center
+	padding-bottom: 80px
+	h1
+		font-size: 48px
+		line-height: 48px
+		margin: 0
+		padding-top: 30px
+		text-transform: uppercase
+		margin-top: 40px
+		margin-bottom: 40px
+		font-family: "Molot", sans-serif
+	.about__text
+		display: inline-block
+		width: 615px
+		font-size: 18px
+		line-height: 23px
+		margin-bottom: 50px
+	.about_download--button
+		padding-bottom: 100px
+		a
+			@extend .main--button
+
+	.animation--gif
+		padding-bottom: 80px
+.about__logo
+	background: url(../img/about-logo.jpg) no-repeat
+	background-size: cover
+	height: 302px
+	p
+		font-size: 18px
+		line-height: 23px
+		color: #e3e3e3
+		padding: 0
+		margin: 0
+		padding-top: 120px
+.about__price
+	text-align: center
+	padding-top: 70px
+	padding-bottom: 80px
+	.about__text
+		display: inline-block
+		width: 615px
+		font-size: 18px
+		line-height: 23px
+		margin: 0
+.about__photo
+	text-align: justify
+	padding-bottom: 130px
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+	img
+		display: inline-block
+//Новости
+.news--header
+	margin: 0 auto
+	background: url('../img/news-logo.jpg') no-repeat
+	background-size: cover
+	width: 100%
+	.navigation
+		li
+			a
+				color: #ffffff
+	.header__language
+		a,span
+			color: #ffffff
+		.active
+			color: #f15a24 
+	.news__head
+		text-align: center
+		padding-bottom: 60px
+		padding-top: 40px
+		h1
+			font-size: 48px
+			line-height: 48px
+			text-transform: uppercase
+			color: #ffffff
+			margin: 0
+			font-family: "Molot", sans-serif
+
+//ALWAYS END
+@import "media"
